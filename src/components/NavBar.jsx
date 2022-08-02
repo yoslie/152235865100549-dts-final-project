@@ -1,10 +1,10 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { signOutFromApps } from "../authentication/firebase";
 
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -12,6 +12,7 @@ function classNames(...classes) {
 
 const NavBar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const buttonLogoutOnClickHandler = async () => {
     await signOutFromApps();
@@ -23,7 +24,7 @@ const NavBar = () => {
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-            <div className="flex justify-between h-16">
+            <div className="flex justify-between h-14">
               <div className="flex px-2 lg:px-0">
                 <div className="flex-shrink-0 flex items-center">
                   <img
@@ -33,18 +34,24 @@ const NavBar = () => {
                   />
                 </div>
                 <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
-                  <a
-                    href="#"
-                    className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  <Link
+                    to="/"
+                    className={location.pathname === '/' ?
+                      "border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                      : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    }
                   >
                     Dashboard
-                  </a>
-                  <a
-                    href="#"
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  </Link>
+                  <Link
+                    to="article"
+                    className={location.pathname === '/article' ?
+                      "border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                      : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    }
                   >
-                    Team
-                  </a>
+                    Article
+                  </Link>
                 </div>
               </div>
               <div className="flex items-center lg:hidden">
