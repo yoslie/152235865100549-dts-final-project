@@ -27,11 +27,13 @@ const NavBar = () => {
             <div className="flex justify-between h-14">
               <div className="flex px-2 lg:px-0">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block h-10 w-auto"
-                    src={process.env.PUBLIC_URL + "assets/image/icons8-restaurant-building-100.png"}
-                    alt="Masak Yo Logo"
-                  />
+                  <Link to="/">
+                    <img
+                      className="block h-10 w-auto"
+                      src={process.env.PUBLIC_URL + "assets/image/icons8-restaurant-building-100.png"}
+                      alt="Masak Yo Logo"
+                    />
+                  </Link>
                 </div>
                 <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
                   <Link
