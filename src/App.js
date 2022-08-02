@@ -1,8 +1,14 @@
 
+import NavBar from "./components/NavBar";
+import HomePage from "./containers/HomePage";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <div className="App">
-      Halaman awal website
+      <NavBar />
+      <HomePage />
+      <Footer />
     </div>
   );
 }
