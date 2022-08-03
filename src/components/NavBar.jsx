@@ -31,11 +31,11 @@ const NavBar = () => {
                     <img
                       className="block h-10 w-auto"
                       src={process.env.PUBLIC_URL + "assets/image/icons8-restaurant-building-100.png"}
-                      alt="Masak Yo Logo"
+                      alt="Restaurant Logo"
                     />
                   </Link>
                 </div>
-                <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
+                <div className="flex ml-6 lg:space-x-8">
                   <Link
                     to="/"
                     className={location.pathname === '/' ?
@@ -44,15 +44,6 @@ const NavBar = () => {
                     }
                   >
                     Dashboard
-                  </Link>
-                  <Link
-                    to="article"
-                    className={location.pathname === '/article' ?
-                      "border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                      : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                    }
-                  >
-                    Article
                   </Link>
                 </div>
               </div>
@@ -108,22 +99,6 @@ const NavBar = () => {
           </div>
 
           <Disclosure.Panel className="lg:hidden">
-            <div className="pt-2 pb-3 space-y-1">
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >
-                Dashboard
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >
-                Team
-              </Disclosure.Button>
-            </div>
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="flex items-center px-4">
                 <div className="flex-shrink-0">

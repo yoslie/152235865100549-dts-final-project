@@ -1,5 +1,5 @@
 const CONFIG = {
-  BASE_API_URL: "https://masak-apa.tomorisakura.vercel.app/api",
+  BASE_API_URL: "https://restaurant-api.dicoding.dev",
   FIREBASE_API_KEY: "AIzaSyBn2LdwO2x6B7f78QETTc_lo8tqjGg0OZg",
   FIREBASE_AUTH_DOMAIN: "dts-mini-project-rea2a-pair14.firebaseapp.com",
   FIREBASE_PROJECT_ID: "dts-mini-project-rea2a-pair14",
