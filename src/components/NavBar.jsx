@@ -13,7 +13,7 @@ function classNames(...classes) {
 const NavBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
+  
   const buttonLogoutOnClickHandler = async () => {
     await signOutFromApps();
     navigate("/login");
@@ -82,10 +82,17 @@ const NavBar = () => {
                   >
                     <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
+                        <div
+                          className="block px-4 py-2 text-sm text-gray-700 w-full text-right"
+                        >
+                          Username
+                        </div>
+                      </Menu.Item>
+                      <Menu.Item>
                         {({ active }) => (
                           <button
                             onClick={buttonLogoutOnClickHandler}
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 w-full')}
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 w-full text-right')}
                           >
                             Sign out
                           </button>
@@ -109,8 +116,9 @@ const NavBar = () => {
                   />
                 </div>
                 <div className="ml-3">
-                  <div className="text-base font-medium text-gray-800">Tom Cook</div>
-                  <div className="text-sm font-medium text-gray-500">tom@example.com</div>
+                  <div className="text-base font-medium text-gray-800">
+                    Username
+                  </div>
                 </div>
               </div>
               <div className="mt-3 space-y-1">
