@@ -1,5 +1,6 @@
-import { initializeApp } from "firebase/app";
 
+import CONFIG from "../api/config";
+import { initializeApp } from "firebase/app";
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -10,12 +11,12 @@ import {
 
 // Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyBn2LdwO2x6B7f78QETTc_lo8tqjGg0OZg",
-  authDomain: "dts-mini-project-rea2a-pair14.firebaseapp.com",
-  projectId: "dts-mini-project-rea2a-pair14",
-  storageBucket: "dts-mini-project-rea2a-pair14.appspot.com",
-  messagingSenderId: "399800286255",
-  appId: "1:399800286255:web:c7cecf5e1ef221620c5ada"
+  apiKey: CONFIG.FIREBASE_API_KEY,
+  authDomain: CONFIG.FIREBASE_AUTH_DOMAIN,
+  projectId: CONFIG.FIREBASE_PROJECT_ID,
+  storageBucket: CONFIG.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: CONFIG.FIREBASE_MESSAGING_SENDER_ID,
+  appId: CONFIG.FIREBASE_APP_ID
 };
 
 // Initiation Firebase
