@@ -1,15 +1,15 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-import HomePage from "./containers/HomePage";
 
 function App() {
 
   return (
     <div className="App"> 
       <NavBar />
-      <HomePage />
+      <Outlet />
       <Footer />
     </div>
   );
