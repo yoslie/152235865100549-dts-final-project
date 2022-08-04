@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from "./containers/LoginPage";
 import RegisterPage from "./containers/RegisterPage";
 import HomePage from "./containers/HomePage";
+import SearchPage from "./containers/SearchPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/search" element={<SearchPage />} />
         </Route>
         <Route path="login" element={<LoginPage />} />
         <Route path="register" element={<RegisterPage />} />

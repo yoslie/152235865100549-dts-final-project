@@ -2,9 +2,9 @@ import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { signOutFromApps } from "../authentication/firebase";
 
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Fragment } from 'react';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -39,7 +39,7 @@ const NavBar = () => {
                   <Link
                     to="/"
                     className={location.pathname === '/' ?
-                      "border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                      "border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                       : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     }
                   >
@@ -49,7 +49,7 @@ const NavBar = () => {
               </div>
               <div className="flex items-center lg:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -62,7 +62,7 @@ const NavBar = () => {
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-4 relative flex-shrink-0">
                   <div>
-                    <Menu.Button className="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <Menu.Button className="bg-white rounded-full flex text-sm">
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8"

@@ -12,8 +12,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 const LoginOrRegisterForm = ({ loginOrRegister }) => {
   const navigate = useNavigate();
-  // eslint-disable-next-line no-unused-vars
-  const [user, isLoading, error] = useAuthState(auth);
+  const [user, isLoading] = useAuthState(auth);
 
   const [credential, setCredential] = useState({
     email: "",
