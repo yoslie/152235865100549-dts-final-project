@@ -6,7 +6,6 @@ function classNames(...classes) {
 }
 
 const DetailRestaurant = ({ data }) => {
-  console.log(data)
   return (<div className="bg-white">
   <div className="pt-2">
 
